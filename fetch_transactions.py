@@ -35,6 +35,7 @@ def fetch_transactions_for_address(address: str, start_block: int = 0) -> list:
         Empty list on error or no transactions found.
     """
     params = {
+        "chainid":    "11155111",       
         "module":     "account",
         "action":     "txlist",
         "address":    address,
@@ -43,6 +44,7 @@ def fetch_transactions_for_address(address: str, start_block: int = 0) -> list:
         "sort":       "asc",          # oldest first — important for is_new_address logic
         "apikey":     ETHERSCAN_API_KEY,
     }
+  
 
     try:
         response = requests.get(ETHERSCAN_BASE_URL, params=params, timeout=10)
