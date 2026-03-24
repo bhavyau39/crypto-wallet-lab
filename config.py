@@ -22,7 +22,7 @@ WALLETS = {
 
 # ── API credentials ─────────────────────────────────────────────
 ETHERSCAN_API_KEY  = os.getenv("ETHERSCAN_API_KEY", "")
-ETHERSCAN_BASE_URL = "https://api-sepolia.etherscan.io/api"
+ETHERSCAN_BASE_URL = "https://api.etherscan.io/api"
 
 SLACK_WEBHOOK_URL  = os.getenv("SLACK_WEBHOOK_URL", "")
 
